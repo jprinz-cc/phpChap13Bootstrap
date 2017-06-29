@@ -1,0 +1,24 @@
+                <!-- END CHANGEABLE CONTENT. -->
+                <?php
+                if ((is_administrator() && (basename($_SERVER['PHP_SELF']) != 'logout.php')) OR (isset($loggedin) && $loggedin) ) {
+
+                    print '<hr><h3>Site Admin</h3>
+                        <p><a href="add_quote.php">Add Quote</a> <-> <a href="view_quotes.php">
+                        View All Quotes</a> <-> <a href="logout.php">Logout</a></p>';
+
+                }
+                ?>
+            </div>
+            <div id="footer">Content &copy; <?php print " " . date('Y', time()); ?></div>
+        </div><!-- container -->
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="js/ie10-viewport-bug-workaround.js"></script>
+    </body>
+</html>
